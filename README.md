@@ -18,3 +18,42 @@ Fire detection based on HSV color space filtering.
 Motion detection using frame differencing and contour analysis.
 
 Real-time video display with fire detection labels.
+
+
+🛠️ Requirements
+Install the following Python packages:
+
+pip install numpy opencv-python
+
+
+▶️ How to Run
+Make sure you have Python installed (version 3.x).
+
+Place your test video in the UAV_Videos/ directory.
+
+Run the application:
+
+bash
+Copy code
+python b92b02a5-b753-49d9-ad93-c961c2455cda.py
+Use the GUI to:
+
+Upload a video.
+
+Start the detection process.
+
+View live results in the popup video windows.
+
+🎯 Detection Approach
+🔶 Color Feature Detection
+* Detects regions in HSV color space that match the fire's hue range.
+
+🔁 Motion Detection
+* Grayscale conversion and Gaussian blur are applied to frames.
+* Frame differencing identifies motion.
+* Thresholding and dilation help extract contours indicating motion regions.
+
+📝 Note:-
+* Fire detection is threshold-based and may be sensitive to lighting conditions.
+
+* Motion detection is basic and doesn't track specific fire patterns or object identities.
